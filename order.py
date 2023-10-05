@@ -6,7 +6,7 @@ class order:
   self.client = client
 
 
- def lista (self):
+ def lista(self):
      print (f"preço total = {self.total_price}. ")
      print (f"status = {self.status}. ")
      print (f"cliente = {self.client}. ")

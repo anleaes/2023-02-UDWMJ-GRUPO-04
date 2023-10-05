@@ -6,7 +6,7 @@ class orderitem:
    self. order = order
    self. product = product
 
- def lista_pedidos (self):
+ def lista_pedidos(self):
      print(f"quantidade = {self.quantity}. ")
      print(f"preço unitário = {self.unitary_price}. ")
      print(f"pedidos = {self.pedidos}. ")
