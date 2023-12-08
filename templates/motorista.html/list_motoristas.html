@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Motoristas - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Motoristas</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'motoristas:add_motorista' %}">Cadastro de novo motorista</a>
+                <br />
+                <br />
+                <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CNH</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for motorista in motoristas %}
+                        <tr>
+                            <th scope="row">{{ motorista.id }}</th>
+                            <td>{{ motorista.name }}</td>
+                            <td>{{ motorista.description }}</td>
+                            <td>{{ motorista.date_fabrication }}</td>
+                            <td>
+                                {% if motorista.is_active == True %}
+                                    Ativo
+                                {% endif %}
+                                {% if motorista.is_active == False %}
+                                    Inativo
+                                {% endif %}
+                            </td>
+                            <td>{{ motorista.category }}</td>
+                            <td>
+                                <a href="{% url 'motoristas:edit_motorista' motorista.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>    
+                                <a href="{% url 'motoristas:delete_motorista' motorista.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
