@@ -1,8 +1,8 @@
 from django import forms
-from .models import Category
+from .models import Client
 
-class CategoryForm(forms.ModelForm):
+class ClientForm(forms.ModelForm):
 
     class Meta:
-        model = Category
+        model = Client
         exclude = ('created_on' , 'updated_on',)
