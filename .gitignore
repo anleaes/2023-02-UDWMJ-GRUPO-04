@@ -7,8 +7,8 @@ db.sqlite3
 /apps/categories/migrations/*
 /apps/products/__pycache__/*
 /apps/products/migrations/*
-/apps/socialnetworks/__pycache__/*
-/apps/socialnetworks/migrations/*
+/apps/rentalcompany/__pycache__/*
+/apps/rentalcompany/migrations/*
 /apps/clients/__pycache__/*
 /apps/clients/migrations/*
 /apps/orders/__pycache__/*
@@ -17,3 +17,6 @@ db.sqlite3
 /apps/tipo_veiculos/migrations/*
 /apps/veiculos/__pycache__/*
 /apps/veiculos/migrations/*
+/apps/accounts/__pycache__/*
+/apps/accounts/migrations/*
+
