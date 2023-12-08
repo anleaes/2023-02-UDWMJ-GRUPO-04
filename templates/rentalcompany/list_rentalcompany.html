@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Produtos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Locadoras</b></h5>
+        <div class="row">
+            <div class ="col-md-12">                
+                <br />
+                    <a href="{% url 'rentalcompany:add_rentalcompany' %}">Cadastro de locadora</a>
+                <br />
+                <br />
+                <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rentalcompany in rentalcompany %}
+                        <tr>
+                            <th scope="row">{{ rentalcompany.id }}</th>
+                            <td>{{ rentalcompany.name }}</td>
+                            <td>{{ rentalcompany.address }}</td>
+                            <td>{{ rentalcompany.cell_phone }}</td>
+                            <td>{{ rentalcompany.email }}</td>
+                            <td>
+                                <a href="{% url 'rentalcompany:edit_rentalcompany' rentalcompany.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>    
+                                <a href="{% url 'rentalcompany:delete_rentalcompany' rentalcompany.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
