@@ -15,3 +15,5 @@ db.sqlite3
 /apps/orders/migrations/*
 /apps/accounts/__pycache__/*
 /apps/accounts/migrations/*
+/apps/payment/__pycache__/*
+/apps/payment/migrations/*
