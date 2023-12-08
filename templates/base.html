@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>{% block title %}Nome do meu App{% endblock title %}</title>
+    <title>{% block title %}APP de Locação de Veiculos{% endblock title %}</title>
 </head>
 <body>
 <!-- INICIO: Bloco do Bootstrap a ser incluido -->
@@ -22,16 +22,16 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                    <a class="dropdown-item" href="#">Clientes</a>
+                    <a class="dropdown-item" href="{% url 'clients:list_clients' %}">Clientes</a>
                     <a class="dropdown-item" href="#">Pedidos</a>
-                    <a class="dropdown-item" href="#">Produtos</a>
+                    <a class="dropdown-item" href="{% url 'rentalcompany:list_rentalcompany' %}">Locadoras</a>
                     <a class="dropdown-item" href="{% url 'categories:list_categories' %}">Categorias</a>
                     <a class="dropdown-item" href="#">Redes Sociais</a>
                 </div>
             </li>
         </ul>
-        <form action="#" method="GET" class="form-inline my-2 my-md-0" style="margin-right: 10px">
-            <input class="form-control" name="query" type="text" aria-label="Buscar" style="margin-right: 10px">
+        <form action="{% url 'clients:search_clients' %}" method="GET" class="form-inline my-2 my-md-0" style="margin-right: 10px">
+            <input class="form-control" name="query" type="text" placeholder="CPF do cliente" aria-label="Buscar" style="margin-right: 10px">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
         </form>
             <ul class="navbar-nav">

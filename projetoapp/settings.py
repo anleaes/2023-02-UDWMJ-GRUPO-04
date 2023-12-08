@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'core.apps.CoreConfig', 
     'categories.apps.CategoriesConfig',
+    'clients.apps.ClientsConfig',
+    'rentalcompany.apps.RentalcompanyConfig', 
+    'accounts.apps.AccountsConfig',   
 ]
 
 MIDDLEWARE = [
