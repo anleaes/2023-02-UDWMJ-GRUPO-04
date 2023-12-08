@@ -20,8 +20,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('categorias/', include('categories.urls', namespace='categories')),
+    path('typevehicles/', include('tipo_veiculos.urls', namespace='tipo_veiculos')),
     path('', include('core.urls', namespace='core')),
+    path('vehicle/', include('veiculos.urls', namespace='veiculos')),
     path('clientes/', include('clients.urls', namespace='clients')),
     path('locadora/', include('rentalcompany.urls', namespace='rentalcompany')),
     path('contas/', include('accounts.urls', namespace='accounts')),

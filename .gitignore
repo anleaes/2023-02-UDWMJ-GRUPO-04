@@ -13,5 +13,10 @@ db.sqlite3
 /apps/clients/migrations/*
 /apps/orders/__pycache__/*
 /apps/orders/migrations/*
+/apps/tipo_veiculos/__pycache__/*
+/apps/tipo_veiculos/migrations/*
+/apps/veiculos/__pycache__/*
+/apps/veiculos/migrations/*
 /apps/accounts/__pycache__/*
 /apps/accounts/migrations/*
+
