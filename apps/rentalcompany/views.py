@@ -38,7 +38,7 @@ def edit_rentalcompany(request, id_rentalcompany):
     context['form'] = form
     return render(request, template_name, context)
 
-def delete_product(request, id_rentalcompany):
+def delete_rentalcompany(request, id_rentalcompany):
     rentalcompany = Rentalcompany.objects.get(id=id_rentalcompany)
     rentalcompany.delete()
     return redirect('rentalcompany:list_rentalcompany')
