@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'clients.apps.ClientsConfig',
     'rentalcompany.apps.RentalcompanyConfig', 
     'accounts.apps.AccountsConfig',
-    'payment.apps.PaymentConfig',   
+    'payment.apps.PaymentConfig',  
+    'reservas.apps.ReservasConfig', 
 ]
 
 MIDDLEWARE = [
